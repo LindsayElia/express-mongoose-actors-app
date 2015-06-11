@@ -1,0 +1,9 @@
+<% include ../partials/header %>
+
+<p> this is the show page for actor with name <%= actorObject.name %> </p>
+<p> body of work includes: <%= actorObject.bodyOfWork %> </p>
+<p> <img src="<%= actorObject.headshot %>" alt="image of actor" height="100px" width="100px"></p>
+
+<p> go back <a href="/actors">home</a></p>
+
+<% include ../partials/footer %>

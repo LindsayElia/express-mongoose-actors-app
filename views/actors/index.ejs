@@ -1,1 +1,29 @@
+<% include ../partials/header %>
+
 <p>hello this is the index.ejs page</p>
+
+<p> Click <a href="actors/new">this link</a> to add a new actor to this page.<p>
+
+<% actorObject.forEach(function(item){  %>
+
+	<div>
+		<p>
+			<img src="<%= item.headshot %>" alt="image of actor" height="100px" width="100px"> 
+			<%= item.name %> , 
+			<%= item.bodyOfWork %> , 
+			<a href="/actors/<%= item.id %>">View this actor's show page</a> 
+
+			<form action="/actors/<%= item.id %>/edit" method="GET">
+				<input type="submit" value="edit">
+			</form>
+
+			<form action="/actors/<%= item.id %>?_method=DELETE" method="POST">
+				<input type="submit" value="delete">
+			</form>
+
+		</p>
+	</div>
+
+<%	});  %>
+
+<% include ../partials/footer %>

@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+
+<p> hello this is the edit page </p>
+<div>
+	<form action="/actors/<%= actorObject.id %>?_method=PUT" method="POST">
+		<div>
+			<label for="name">Name of actor: </label>
+			<input type="text" name="actorObject[name]" value="<%= actorObject.name %>" autofocus>
+		</div>
+		<div>
+			<label for="bodyOfWork">Film or tv show actor has been in: </label>
+			<input type="text" name="actorObject[bodyOfWork]" value="<%= actorObject.bodyOfWork %>">
+		</div>
+		<div>
+			<label for="headshot">Link to photo of actor: </label>
+			<input type="text" name="actorObject[headshot]" value="<%= actorObject.headshot %>">
+		</div>
+		<div>
+			<input type="submit" value="Update actor">
+		</div>
+
+		<p> or go <a href="/actors">home</a></p>
+
+	</form>
+</div>
+
+
+<% include ../partials/footer %>

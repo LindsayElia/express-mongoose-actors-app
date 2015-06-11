@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+
+<p> hello this is the new page </p>
+<div>
+	<form action="/actors" method="POST">
+		<div>
+			<label for="name">Name of actor: </label>
+			<input type="text" name="actorObject[name]" autofocus>
+		</div>
+		<div>
+			<label for="bodyOfWork">Film or tv show actor has been in: </label>
+			<input type="text" name="actorObject[bodyOfWork]">
+		</div>
+		<div>
+			<label for="headshot">Link to photo of actor: </label>
+			<input type="text" name="actorObject[headshot]">
+		</div>
+		<div>
+			<input type="submit" value="Create actor">
+		</div>
+
+	</form>
+</div>
+
+<% include ../partials/footer %>
